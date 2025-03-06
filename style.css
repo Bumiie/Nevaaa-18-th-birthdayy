@@ -1,376 +1,182 @@
-*{
-    text-decoration: none;
-    margin : 0px;
-    padding : 0px;  
-    background-color: #ffffff;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'open sans',sans-serif;
+  background: #ffffff;
+  overflow: hidden;
+}
+.container {
+  color: rgba(55, 59, 65, 0.8);
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
 }
 
-
-.wrapper {
-    width: 1100px;
-    margin:auto;
-    position: relative;
-
+h1 {
+  font-weight: normal;
 }
-
-.logo a {
-    font-size: 35px;
-    font-weight: bold ;
-    float: left;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
 }
-
-.menu {
-    float: right;
+li span {
+  display: block;
+  font-size: 4.5rem;
 }
-
-nav  {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    line-height: 80px;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    background: #ffffff;
-    z-index: 1;
-    
+.merrywrap {
+  position: absolute;
+  right: 40px;
+  left: 40px;
+  bottom: 80px;
+  top: 40px;
 }
-
-
-.abouther{ 
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
+.giftbox {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  left: 50%;
+  margin-left: -150px;
+  bottom: 0;
+  z-index: 10;
 }
-
-.abouther:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox > div {
+  background: #F64747;
+  position: absolute;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.4);
 }
-
-
-
-.herhobbies{ 
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
+.giftbox > div:after, .giftbox > div:before {
+  position: absolute;
+  content: "";
+  top: 0;
 }
-
-.herside{ 
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
+.giftbox:after {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  content: "Click Me!";
+  left: 0;
+  bottom: 0;
+  font-size: 24px;
+  text-align: center;
+  transform: rotate(-20deg);
+  transform-origin: 0 0;
 }
-
-.herside:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox .cover {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 25%;
+  z-index: 2;
 }
-
-
-.herhobbies:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox .cover:before {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  width: 50px;
+  transform: translateX(-50%);
+  background: #2C3E50;
 }
-
-.ulangtahun{
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
+.giftbox .cover > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
 }
-
-.ulangtahun:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox .cover > div:before, .giftbox .cover > div:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: inset 0 0 0 15px #2C3E50;
+  border-radius: 30px;
+  transform-origin: 50% 100%;
 }
-
-.tombol1 {
-    float: left;
-    margin-top: 100x;
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-    width: 
-
+.giftbox .cover > div:before {
+  transform: translateX(-45%) skewY(40deg);
 }
-
-.tombol1:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox .cover > div:after {
+  transform: translateX(45%) skewY(-40deg);
 }
-    
-.kolom p {
-    margin-bottom: 10px;
-    color: black;
+.giftbox .box {
+  right: 5%;
+  left: 5%;
+  height: 80%;
+  bottom: 0;
 }
-
-
-
-
-a.birthday {
-    background: #fc5185;
-    border-radius: 20px;
-    margin-top: 300px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-
+.giftbox .box:before {
+  width: 50px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2C3E50;
 }
-a.birthday:hover {
-    background-color: #3f72af ;
-    text-decoration: none;
+.giftbox .box:after {
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0);
 }
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-
+.step-1 .giftbox {
+  animation: wobble 0.5s linear infinite forwards;
 }
-
-nav ul li {
-    float: left;
-    
+.step-1 .cover {
+  animation: wobble 0.5s linear infinite 5s forwards;
 }
-
-nav ul li a {
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    padding:  0px 16px 0px 16px;
-    text-decoration: none;
-    
+.step-1 .icons .row span {
+  opacity: 1;
 }
-
-nav ul li a:hover {
-    text-decoration: underline;
+.step-2 .giftbox:after {
+  opacity: 0;
 }
-
-section {
-    margin: auto;
-    margin-top: 100px;
-    display: flex;
-    margin-bottom: 50px;
-
+.step-3 .giftbox, .step-4 .giftbox {
+  opacity: 0;
+  z-index: 1;
 }
-
-img {
-    border-radius: 100px;
-    
+.step-3 .giftbox:after, .step-4 .giftbox:after {
+  opacity: 0;
 }
-
-.kolom {
-    margin-top: 0px;
-    margin-bottom: 50px;
-    margin-left: 20px;
-
+.step-2 .giftbox .cover {
+  animation: flyUp 2s ease-in forwards;
 }
-
-.kolom .deskripsi {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black ;
-    background: #fc5185;
-    background-size :100PX;
-    border-radius: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
-    
+.step-2 .giftbox .box {
+  animation: flyDown 2s ease-in 0.05s forwards;
 }
-
-.kolom .deskripsineva {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black ;
-    margin-bottom: 10px;
-
+@keyframes wobble {
+  25% {
+      transform: rotate(4deg);
+ }
+  75% {
+      transform: rotate(-2deg);
+ }
 }
-
-.kolom .deskripsineva1 {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black ;
-    background: #fc5185;
-    background-size :100PX;
-    border-radius: 20px;
-    padding: 15px 20px 15px 20px;
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: bold;
+@keyframes flyUp {
+  75% {
+      opacity: 1;
+ }
+  100% {
+      transform: translateY(-1000px) rotate(20deg);
+      opacity: 0;
+ }
 }
-
-.kolom .p {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    margin-bottom: 100px;
-
-}
-
-h2 {
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 30px;
-    font-weight: 45px;
-    margin-bottom : 20px;
-    color: black;
-    width: 100%;
-    line-height: 50px;
-
-}
-
-.tengah {
-    text-align: center;
-    width: 100%;
-
-}
-
-.list-hobi {
-    width: 100%;
-    position: relative;
-    display: flex;
-    text-wrap: wrap;
-
-}
-
-.hobi {
-    width: 20%;
-    margin: 0 auto;
-    text-align: center;
-
-}
-
-.hobi img{
-    width: 300px;
-    height: 200px;
-    border-radius: 200px;
-}
-
-.hobi H2 {
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    font-weight: 45px;
-    margin-bottom : 20px;
-    margin-left: 50px;
-    color: black;
-    width: 100%;
-    line-height: 50px;
-
-}
-
-.hobi p{
-    font-size: 15px;
-    margin-left: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: black;
-    margin-bottom: 100px;
-    text-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    font-weight: 100;
-}
-
-
-
-
-
-
-.hobi  {
-    font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 800;
-    font-size: 25PX;
-    text-align: center;
-    color:black;
-}
-
-
-
-@media screen and (max-width: 991.98px) {
-    .wrapper {
-        width: 90%;
-    }
-
-    .logo a {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav .menu {
-        width: 100%;
-        margin: 0;
-
-    }
-
-    nav .menu ul {
-        text-align: center;
-        margin: auto;
-        line-height: 60px;
-
-    }
-
-    nav .menu ul li {
-        display: inline-block;
-        float: none;
-    }
-
-    section {
-        display: block;
-
-    }
-
-    section img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-
-    .list-hobi {
-        width: 50%;
-    }
-
-    .hobi {
-        width: 50%;
-    }
+@keyframes flyDown {
+  75% {
+      opacity: 1;
+ }
+  100% {
+      transform: translateY(100%);
+      opacity: 0;
+ }
 }
